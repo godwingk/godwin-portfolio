@@ -20,7 +20,6 @@ import {
 
 const Skills = () => {
   const skills = [
-    // Frontend Technologies
     { name: "ReactJS", icon: FaReact, color: "#61DAFB" },
     { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
     { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
@@ -28,21 +27,17 @@ const Skills = () => {
     { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
 
-    // Backend & Database
     { name: "NodeJS", icon: FaNodeJs, color: "#339933" },
     { name: "Django", icon: SiDjango, color: "#092E20" },
     { name: "MySQL", icon: SiMysql, color: "#4479A1" },
 
-    // Programming Languages
     { name: "Python", icon: FaPython, color: "#3776AB" },
     { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
 
-    // Tools & Others
     { name: "Git", icon: FaGitAlt, color: "#F05032" },
-    { name: "GitHub", icon: FaGithub, color: "#ffffff" },
+    { name: "GitHub", icon: FaGithub, color: "#181717" },
 
-    // UI Libraries
-    { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
   ];
 
   return (
@@ -50,11 +45,9 @@ const Skills = () => {
       id="skills"
       className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors duration-500"
     >
-      {/* Background Design */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
 
-        {/* Floating shapes */}
         <div className="absolute top-20 left-4 sm:left-20 w-24 h-24 sm:w-32 sm:h-32 bg-purple-500/10 rounded-full filter blur-2xl animate-pulse"></div>
         <div
           className="absolute bottom-20 right-4 sm:right-20 w-32 h-32 sm:w-40 sm:h-40 bg-blue-500/10 rounded-full filter blur-2xl animate-pulse"
@@ -92,7 +85,6 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -123,26 +115,35 @@ const Skills = () => {
                     }}
                     className="bg-white dark:bg-gray-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center cursor-pointer group border border-gray-200 dark:border-gray-600 hover:shadow-xl transition-all duration-300"
                   >
-                    {/* Icon */}
                     <div className="mb-3 relative">
                       <Icon
                         size={40}
-                        color={skill.color}
-                        className="group-hover:scale-110 transition-transform duration-300"
+                        color={
+                          skill.name === "GitHub" || skill.name === "Next.js"
+                            ? "currentColor"
+                            : skill.color
+                        }
+                        className={`group-hover:scale-110 transition-transform duration-300 ${
+                          skill.name === "GitHub" || skill.name === "Next.js"
+                            ? "text-gray-800 dark:text-white"
+                            : ""
+                        }`}
                       />
-                      {/* Glow effect on hover */}
                       <div
                         className="absolute -inset-2 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-sm"
-                        style={{ backgroundColor: skill.color }}
+                        style={{
+                          backgroundColor:
+                            skill.name === "GitHub" || skill.name === "Next.js"
+                              ? "#6366f1"
+                              : skill.color,
+                        }}
                       ></div>
                     </div>
 
-                    {/* Skill Name */}
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {skill.name}
                     </h3>
 
-                    {/* Skill Level Indicator */}
                     <div className="mt-2 flex gap-1">
                       {[...Array(3)].map((_, i) => (
                         <div
@@ -161,54 +162,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Learning Journey */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                icon: "🎓",
-                title: "Fresh Graduate",
-                description:
-                  "Recently completed my degree and ready to start my career journey",
-              },
-              {
-                icon: "💡",
-                title: "Quick Learner",
-                description:
-                  "Passionate about learning new technologies and adapting to challenges",
-              },
-              {
-                icon: "🚀",
-                title: "Future Ready",
-                description:
-                  "Building projects and gaining hands-on experience with modern tools",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:shadow-lg transition-all duration-300"
-                whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
-
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

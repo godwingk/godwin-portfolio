@@ -1,16 +1,13 @@
-/* Custom styles for the portfolio */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Typing animation enhancements */
 .typing-text {
   position: relative;
   display: inline-block;
@@ -36,7 +33,6 @@ html {
   }
 }
 
-/* Enhanced button hover effects */
 .cv-button {
   position: relative;
   overflow: hidden;

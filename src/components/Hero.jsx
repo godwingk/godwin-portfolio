@@ -58,7 +58,6 @@ const Hero = () => {
 
   return (
     <>
-      {/* Mobile-Optimized Navigation */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -66,7 +65,6 @@ const Hero = () => {
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 sm:h-16 items-center justify-between">
-            {/* Brand Logo - Mobile Optimized */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-2 sm:gap-3 cursor-pointer"
@@ -79,7 +77,6 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Navigation Actions */}
             <div className="flex items-center gap-1 sm:gap-2">
               {/* Social Links */}
               <motion.a
@@ -119,7 +116,6 @@ const Hero = () => {
                 <FaEnvelope className="text-sm sm:text-base" />
               </motion.button>
 
-              {/* Theme Toggle */}
               <div className="ml-1 sm:ml-2 pl-1 sm:pl-2 border-l border-slate-700">
                 <motion.button
                   onClick={toggleTheme}
@@ -141,11 +137,9 @@ const Hero = () => {
       </motion.header>
 
       <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:bg-gradient-to-br dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/20 overflow-hidden pt-14 sm:pt-16 transition-colors duration-500">
-        {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-purple-100/30 to-indigo-100/30 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-gray-900 transition-colors duration-500"></div>
 
-          {/* Floating shapes */}
           <div className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-500/10 dark:bg-blue-500/20 rounded-full filter blur-3xl animate-pulse transition-colors duration-500"></div>
           <div
             className="absolute bottom-20 right-4 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-purple-500/10 dark:bg-purple-500/20 rounded-full filter blur-3xl animate-pulse transition-colors duration-500"
@@ -159,7 +153,6 @@ const Hero = () => {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 sm:py-12">
-            {/* Left Side - Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -192,7 +185,6 @@ const Hero = () => {
                 </h2>
               </motion.div>
 
-              {/* Floating Tech Icons */}
               <motion.div
                 className="flex gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start"
                 initial={{ opacity: 0, y: 20 }}
@@ -250,7 +242,6 @@ const Hero = () => {
                 >
                   <FaDownload className="text-sm" />
                   Download CV
-                  {/* Shine effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                     initial={{ x: "-100%" }}
@@ -261,7 +252,6 @@ const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Side - Profile Image */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -293,7 +283,6 @@ const Hero = () => {
                   </div>
                 </motion.div>
 
-                {/* Decorative elements */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-purple-600/20 dark:from-blue-400/30 dark:to-purple-600/30 rounded-full opacity-20 animate-pulse transition-colors duration-500"></div>
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400 dark:bg-blue-500 rounded-full animate-bounce transition-colors duration-500"></div>
                 <div

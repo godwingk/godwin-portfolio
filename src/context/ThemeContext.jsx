@@ -38,7 +38,6 @@ export const ThemeProvider = ({ children }) => {
     setIsTransitioning(true);
     setIsDark(!isDark);
 
-    // Reset transition state after animation
     setTimeout(() => {
       setIsTransitioning(false);
     }, 500);

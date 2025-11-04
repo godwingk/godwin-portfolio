@@ -55,13 +55,11 @@ const Education = () => {
       id="education"
       className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors duration-500"
     >
-      {/* Background Design */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 via-blue-100/30 to-purple-100/30 dark:from-green-900/20 dark:via-blue-900/20 dark:to-purple-900/20 transition-colors duration-500"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +84,6 @@ const Education = () => {
           </p>
         </motion.div>
 
-        {/* Education Cards */}
         <div className="max-w-4xl mx-auto space-y-8">
           {educationData.map((edu, index) => {
             const Icon = edu.icon;
@@ -153,7 +150,6 @@ const Education = () => {
           })}
         </div>
 
-        {/* Achievement Stats */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

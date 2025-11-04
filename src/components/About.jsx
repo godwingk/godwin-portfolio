@@ -34,7 +34,6 @@ const About = () => {
       className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden transition-colors duration-500"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +58,6 @@ const About = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Professional Story Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,14 +65,12 @@ const About = () => {
             viewport={{ once: true }}
             className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 shadow-xl transition-colors duration-500"
           >
-            {/* Section Title */}
             <div className="mb-8">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-500">
                 Full-Stack Developer
               </h3>
             </div>
 
-            {/* Content Paragraphs */}
             <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-lg transition-colors duration-500">
               <p>
                 I'm a full-stack developer with a{" "}
@@ -133,7 +129,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* What Drives Me Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +136,6 @@ const About = () => {
             viewport={{ once: true }}
             className="bg-white/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-xl transition-colors duration-500"
           >
-            {/* Section Header */}
             <div className="flex items-center gap-3 mb-8">
               <span className="text-2xl">⚡</span>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-500">
@@ -149,7 +143,6 @@ const About = () => {
               </h3>
             </div>
 
-            {/* Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {driveCards.map((card, index) => (
                 <motion.div
@@ -162,14 +155,12 @@ const About = () => {
                   className="bg-gray-800 dark:bg-gray-700 rounded-xl p-6 border border-gray-700 dark:border-gray-600 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className="flex items-center gap-4">
-                    {/* Icon */}
                     <div
                       className={`w-12 h-12 rounded-lg bg-gradient-to-r ${card.color} flex items-center justify-center text-white text-xl shadow-lg`}
                     >
                       {card.icon}
                     </div>
 
-                    {/* Content */}
                     <div>
                       <p className="text-gray-400 dark:text-gray-300 text-sm font-medium transition-colors duration-500">
                         {card.title}
@@ -184,7 +175,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Seeking Opportunities Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +198,6 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -131,7 +131,6 @@ const Projects = () => {
     document.body.style.overflow = "unset";
   };
 
-  // Different animation variants for mobile and desktop
   const modalVariants = {
     hidden: isMobile
       ? { opacity: 0, y: "100%" }
@@ -169,7 +168,6 @@ const Projects = () => {
         className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         ref={ref}
       >
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +190,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
@@ -221,7 +218,6 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                {/* Tech Stack Icons */}
                 <div className="absolute bottom-4 left-4 flex gap-2">
                   {project.tech.map((TechIcon, techIndex) => (
                     <div
@@ -233,7 +229,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Click Indicator */}
                 <div className="absolute top-4 right-4 bg-blue-600/80 backdrop-blur-sm rounded-full px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-white text-xs font-medium">
                     {isMobile ? "Tap to view" : "Click to view"}
@@ -241,7 +236,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {project.title}
@@ -254,7 +248,6 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +273,6 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* Project Modal - Responsive Design */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -312,7 +304,6 @@ const Projects = () => {
               `}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Mobile Handle Bar */}
               {isMobile && (
                 <div className="flex justify-center pt-3 pb-2">
                   <div className="w-12 h-1 bg-gray-400 dark:bg-gray-600 rounded-full transition-colors duration-500"></div>
@@ -334,7 +325,6 @@ const Projects = () => {
                   }`}
                 ></div>
 
-                {/* Close Button */}
                 <button
                   onClick={closeModal}
                   className={`absolute top-4 right-4 ${
@@ -348,7 +338,6 @@ const Projects = () => {
                   )}
                 </button>
 
-                {/* Title Overlay */}
                 <div className="absolute bottom-4 left-6">
                   <h3
                     className={`font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-500 ${
@@ -363,9 +352,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Modal Content */}
               <div className={`space-y-6 ${isMobile ? "p-4" : "p-6"}`}>
-                {/* Description */}
                 <div>
                   <h4
                     className={`font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-500 ${
@@ -383,7 +370,6 @@ const Projects = () => {
                   </p>
                 </div>
 
-                {/* Features */}
                 <div>
                   <h4
                     className={`font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-500 ${
@@ -409,7 +395,6 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                {/* Technologies */}
                 <div>
                   <h4
                     className={`font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-500 ${
@@ -432,7 +417,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Mobile Bottom Spacing */}
                 {isMobile && <div className="h-4"></div>}
               </div>
             </motion.div>

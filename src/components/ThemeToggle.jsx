@@ -26,7 +26,6 @@ const ThemeToggle = () => {
       whileTap={{ scale: 0.95 }}
       disabled={isTransitioning}
     >
-      {/* Toggle Circle */}
       <motion.div
         className={`
           w-6 h-6 rounded-full shadow-md flex items-center justify-center text-xs
@@ -52,7 +51,6 @@ const ThemeToggle = () => {
         </motion.span>
       </motion.div>
 
-      {/* Background Icons */}
       <div className="absolute inset-0 flex items-center justify-between px-2 pointer-events-none">
         <motion.span
           className={`text-xs transition-opacity duration-300 ${
@@ -72,7 +70,6 @@ const ThemeToggle = () => {
         </motion.span>
       </div>
 
-      {/* Ripple Effect */}
       {isTransitioning && (
         <motion.div
           className="absolute inset-0 rounded-full bg-white/20"

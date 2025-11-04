@@ -34,7 +34,6 @@ const Contact = () => {
     setSubmitStatus("");
 
     try {
-      // EmailJS configuration
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -56,7 +55,6 @@ const Contact = () => {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
-      // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus(""), 5000);
     }
   };
@@ -90,7 +88,7 @@ const Contact = () => {
       icon: FaGithub,
       label: "GitHub",
       href: "https://github.com/godwingk",
-      color: "#ffffff",
+      color: "#0077B5",
     },
     {
       icon: FaLinkedin,
@@ -111,11 +109,9 @@ const Contact = () => {
       id="contact"
       className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden transition-colors duration-500"
     >
-      {/* Background Design */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-purple-100/30 to-indigo-100/30 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-gray-900 transition-colors duration-500"></div>
 
-        {/* Floating shapes */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse"></div>
         <div
           className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse"
@@ -124,7 +120,6 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +143,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -254,7 +248,6 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -296,7 +289,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div>
               <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-500">
                 Follow Me
@@ -325,7 +317,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Call to Action */}
             <div className="bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-600/20 dark:to-purple-600/20 rounded-2xl p-6 border border-blue-200/50 dark:border-blue-500/30 transition-colors duration-500">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-500">
                 Let's Build Something Great!
