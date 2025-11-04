@@ -104,14 +104,20 @@ const Hero = () => {
                 <FaLinkedin className="text-sm sm:text-base" />
               </motion.a>
 
-              {/* <motion.a
-                href="mailto:godwinkumar1231@gmail.com"
+              <motion.button
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-400 transition-all duration-200 hover:bg-slate-800 hover:text-emerald-400 active:scale-95"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label="Go to contact section"
               >
                 <FaEnvelope className="text-sm sm:text-base" />
-              </motion.a> */}
+              </motion.button>
 
               {/* Theme Toggle */}
               <div className="ml-1 sm:ml-2 pl-1 sm:pl-2 border-l border-slate-700">
