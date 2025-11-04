@@ -51,8 +51,8 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "Godwin_CV.pdf";
+    link.href = "/godwinkumar-resume.pdf";
+    link.download = "Godwin_Kumar_Resume.pdf";
     link.click();
   };
 
@@ -171,7 +171,7 @@ const Hero = () => {
               >
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                  Godwin
+                  Godwin Kumar
                 </span>
               </motion.h1>
 
