@@ -72,14 +72,11 @@ const Hero = () => {
               className="flex items-center gap-2 sm:gap-3 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg">
-                <span className="text-xs sm:text-sm font-bold text-white">
-                  G
-                </span>
+              <div className="flex items-center space-x-2">
+                <h1 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+                  Welcome to my Portfolio
+                </h1>
               </div>
-              <span className="text-base sm:text-lg font-semibold text-white">
-                Godwin
-              </span>
             </motion.div>
 
             {/* Navigation Actions */}
@@ -97,7 +94,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="www.linkedin.com/in/godwinkumar"
+                href="https://www.linkedin.com/in/godwinkumar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-400 transition-all duration-200 hover:bg-slate-800 hover:text-blue-400 active:scale-95"
@@ -107,14 +104,14 @@ const Hero = () => {
                 <FaLinkedin className="text-sm sm:text-base" />
               </motion.a>
 
-              <motion.a
+              {/* <motion.a
                 href="mailto:godwinkumar1231@gmail.com"
                 className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-400 transition-all duration-200 hover:bg-slate-800 hover:text-emerald-400 active:scale-95"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <FaEnvelope className="text-sm sm:text-base" />
-              </motion.a>
+              </motion.a> */}
 
               {/* Theme Toggle */}
               <div className="ml-1 sm:ml-2 pl-1 sm:pl-2 border-l border-slate-700">
@@ -280,8 +277,13 @@ const Hero = () => {
                       e.target.nextSibling.style.display = "flex";
                     }}
                   />
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600 text-5xl sm:text-6xl font-bold text-white hidden">
-                    G
+                  <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg group active:scale-95 transition-transform duration-300">
+                    <img
+                      src="/profile.png"
+                      alt="Godwin"
+                      className="h-full w-full object-cover transform group-active:translate-y-1 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/50 to-purple-600/50 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                 </motion.div>
 

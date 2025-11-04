@@ -1,0 +1,17 @@
+{
+  "name": "Godwin Kumar - Full Stack Developer Portfolio",
+  "short_name": "Godwin Portfolio",
+  "description": "Fresh graduate passionate about creating amazing web experiences with modern technologies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
